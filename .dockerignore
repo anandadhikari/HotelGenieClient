@@ -1,0 +1,28 @@
+# Git
+.git
+.gitignore
+
+# Node modules
+node_modules
+
+# Build artifacts
+dist
+build
+bundle-analysis.html
+
+# Local environment files
+.env
+
+# IDE and editor folders
+.vscode
+.idea
+
+# Docker
+Dockerfile
+.dockerignore
+nginx.conf
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
