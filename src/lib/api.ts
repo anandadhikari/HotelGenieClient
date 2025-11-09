@@ -9,7 +9,7 @@ export const fetchRooms = async (startDate: string, endDate: string, minOccupanc
   }
 
   const response = await fetch(
-    `${api_url}/api/main/available-rooms?startDate=${startDate}&endDate=${endDate}&minOccupancy=${minOccupancy}`,
+    `${api_url}/api/rooms/available-rooms?startDate=${startDate}&endDate=${endDate}&minOccupancy=${minOccupancy}`,
     { headers }
   );
 

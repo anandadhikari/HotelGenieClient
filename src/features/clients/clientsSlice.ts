@@ -20,7 +20,7 @@ export const fetchClients = createAsyncThunk('clients/fetchClients', async (_, {
   }
 
   const api_url = import.meta.env.VITE_API_BASE_URL as string;
-  const response = await fetch(`${api_url}/api/clients`, {
+  const response = await fetch(`${api_url}/api/users`, {
     method: 'GET',
     headers: { Authorization: `Bearer ${token}` },
   });

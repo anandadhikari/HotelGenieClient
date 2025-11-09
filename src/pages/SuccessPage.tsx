@@ -27,7 +27,7 @@ const SuccessContent = () => {
     const fetchSessionDetails = async () => {
       try {
         const api_url = import.meta.env.VITE_API_BASE_URL as string
-        const response = await fetch(`${api_url}/api/stripe/get-session?session_id=${session_id}`)
+        const response = await fetch(`${api_url}/api/payments/get-session?session_id=${session_id}`)
         if (!response.ok) throw new Error('Failed to retrieve session details.')
         const data = await response.json()
         setSessionDetails(data)

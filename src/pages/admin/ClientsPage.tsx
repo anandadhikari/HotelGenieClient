@@ -35,7 +35,7 @@ export default function ClientsPage() {
         return;
       }
       const api_url = import.meta.env.VITE_API_BASE_URL as string;
-      const response = await fetch(`${api_url}/api/clients`, {
+      const response = await fetch(`${api_url}/api/users`, {
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -97,7 +97,7 @@ export default function ClientsPage() {
         setIsSubmitting(false);
         return;
       }
-      const url = editingClient ? `${api_url}/api/clients/${editingClient.email}` : `${api_url}/api/clients`;
+      const url = editingClient ? `${api_url}/api/users/${editingClient.email}` : `${api_url}/api/users`;
       const method = editingClient ? 'PUT' : 'POST';
 
       const response = await fetch(url, {
@@ -150,7 +150,7 @@ export default function ClientsPage() {
         setIsSubmitting(false);
         return;
       }
-      const response = await fetch(`${api_url}/api/clients/${clientToDelete}`, {
+      const response = await fetch(`${api_url}/api/users/${clientToDelete}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
